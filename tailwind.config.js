@@ -7,10 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sintonia-blue': '#4063B0',    // El azul de tu última imagen
-        'sintonia-dark': '#1E293B',    // Gris pizarra para textos
-        'sintonia-bone': '#F9F7F2',    // Blanco hueso para fondos
-        'sintonia-light': '#F1F5F9',   // Gris muy claro para inputs
+        // Ahora 'primary' usará lo que definas en el CSS
+        primary: 'var(--color-primary)',
+        'primary-dark': 'var(--color-primary-dark)',
       },
     },
   },
