@@ -1,1 +1,28 @@
-
+{
+  "introduccion": {
+    "titulo": "Un momento para pensar en usted y en su familia",
+    "texto": "Todos queremos lo mejor para nuestros hijos... Responda con total sinceridad."
+  },
+  "escala": [
+    {"valor": 1, "etiqueta": "Nunca"},
+    {"valor": 2, "etiqueta": "Casi nunca"},
+    {"valor": 3, "etiqueta": "A veces"},
+    {"valor": 4, "etiqueta": "Casi siempre"},
+    {"valor": 5, "etiqueta": "Siempre"}
+  ],
+  "preguntas": [
+    { "id": 1, "categoria": "desgaste", "texto": "¿Qué tan seguido las preocupaciones del trabajo le quitan el sueño?" },
+    { "id": 2, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente que el cansancio del trabajo lo pone de mal humor?" },
+    { "id": 3, "categoria": "desgaste", "texto": "¿Qué tan seguido siente que por el trabajo le duele el cuerpo o se siente agotado?" },
+    { "id": 4, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente ganas de aprender algo nuevo para su trabajo?", "invertida": true },
+    { "id": 5, "categoria": "conexion", "texto": "¿Qué tan seguido saca tiempo para compartir con su familia?" },
+    { "id": 6, "categoria": "conexion", "texto": "¿Con qué frecuencia puede hablar tranquilo con sus hijos?" },
+    { "id": 7, "categoria": "conexion", "texto": "¿Qué tan seguido siente que en su casa se escuchan unos a otros?" },
+    { "id": 8, "categoria": "conflicto", "texto": "¿Con qué frecuencia terminan gritando cuando hay un problema?" },
+    { "id": 9, "categoria": "conflicto", "texto": "¿Qué tan seguido se quedan callados o evitan hablar cuando algo les molesta?" },
+    { "id": 10, "categoria": "crianza", "texto": "¿Con qué frecuencia tienen horarios en casa (comer/dormir)?" },
+    { "id": 11, "categoria": "crianza", "texto": "¿Se sienta a explicarles lo que pasó en vez de solo regañar?" },
+    { "id": 12, "categoria": "crianza", "texto": "¿Qué tan seguido deja que sus hijos hagan solos lo que ya saben hacer?" },
+    { "id": 13, "categoria": "crianza", "texto": "¿Con qué frecuencia logra mantener la calma al poner reglas?" }
+  ]
+}
