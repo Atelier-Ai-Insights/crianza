@@ -6,8 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Usaremos una fuente profesional
+      colors: {
+        'sintonia-dark': '#003366',
+        'sintonia-blue': '#0055A4',
       },
     },
   },
