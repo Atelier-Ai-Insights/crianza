@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* AQUÍ CAMBIAS EL COLOR UNA SOLA VEZ */
+  --color-primary: #4063B0;      /* Azul Sintonía */
+  --color-primary-dark: #112D55; /* Azul oscuro para botones al presionar */
+  --color-bg-page: #FFFFFF;      /* Fondo de la página (Blanco puro) */
+}
+
 body {
-  @apply bg-[#F9F7F2] text-slate-700 antialiased font-sans;
+  background-color: var(--color-bg-page);
+  @apply text-slate-700 antialiased font-sans;
 }
