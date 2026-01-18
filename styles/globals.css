@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#003366] antialiased;
+  @apply bg-[#F9F7F2] text-slate-700 antialiased;
+}
+
+/* Suavizar transiciones de las tarjetas */
+.card-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
 }
