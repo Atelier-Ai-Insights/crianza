@@ -1,15 +1,15 @@
 [
-  { "id": 1, "categoria": "desgaste", "texto": "¿Qué tan seguido las preocupaciones del trabajo le quitan el sueño?" },
-  { "id": 2, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente que el cansancio del trabajo lo pone de mal humor?" },
-  { "id": 3, "categoria": "desgaste", "texto": "¿Qué tan seguido siente que por el trabajo le duele el cuerpo?" },
-  { "id": 4, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente ganas de aprender algo nuevo?", "invertida": true },
-  { "id": 5, "categoria": "conexion", "texto": "¿Qué tan seguido saca tiempo para compartir con su familia?" },
-  { "id": 6, "categoria": "conexion", "texto": "¿Con qué frecuencia puede hablar tranquilo con sus hijos?" },
-  { "id": 7, "categoria": "conexion", "texto": "¿Qué tan seguido siente que en su casa se escuchan?" },
-  { "id": 8, "categoria": "conflicto", "texto": "¿Con qué frecuencia terminan gritando ante un problema?" },
-  { "id": 9, "categoria": "conflicto", "texto": "¿Qué tan seguido evitan hablar cuando algo les molesta?" },
-  { "id": 10, "categoria": "crianza", "texto": "¿Con qué frecuencia siguen horarios y rutinas en casa?" },
+  { "id": 1, "categoria": "desgaste", "texto": "¿Qué tan seguido las preocupaciones del trabajo le quitan el sueño o no lo dejan descansar bien?" },
+  { "id": 2, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente que el cansancio del trabajo lo pone de mal humor con las personas con las que vive?" },
+  { "id": 3, "categoria": "desgaste", "texto": "¿Qué tan seguido siente que por el trabajo le duele el cuerpo o se siente sin fuerzas?" },
+  { "id": 4, "categoria": "desgaste", "texto": "¿Con qué frecuencia siente ganas de aprender algo nuevo para mejorar en lo que hace en su trabajo?", "invertida": true },
+  { "id": 5, "categoria": "conexion", "texto": "¿Qué tan seguido saca tiempo de calidad para compartir con su familia y estar juntos?" },
+  { "id": 6, "categoria": "conexion", "texto": "¿Con qué frecuencia puede hablar tranquilo y de buena manera con sus hijos e hijas?" },
+  { "id": 7, "categoria": "conexion", "texto": "¿Qué tan seguido siente que en su casa se escuchan unos a otros y se entienden?" },
+  { "id": 8, "categoria": "conflicto", "texto": "Cuando hay un problema en casa, ¿con qué frecuencia terminan gritando o hablando muy fuerte?" },
+  { "id": 9, "categoria": "conflicto", "texto": "¿Qué tan seguido se quedan callados o evitan hablar cuando algo les molesta, en vez de buscar una solución?" },
+  { "id": 10, "categoria": "crianza", "texto": "¿Con qué frecuencia tienen horarios y rutinas en casa (para comer o dormir) que les den tranquilidad a los niños?" },
   { "id": 11, "categoria": "crianza", "texto": "Cuando sus hijos hacen algo mal, ¿qué tan seguido se sienta con ellos a explicarles lo que pasó en lugar de solo regañar o castigar?" },
   { "id": 12, "categoria": "crianza", "texto": "¿Con qué frecuencia permite que sus hijos hagan solos las tareas que ellos ya son capaces de realizar?" },
-  { "id": 13, "categoria": "crianza", "texto": "¿Logra mantener la calma al poner reglas y límites?" }
+  { "id": 13, "categoria": "crianza", "texto": "¿Qué tan seguido logra mantener la calma al momento de poner reglas o límites en el hogar?" }
 ]
