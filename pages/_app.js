@@ -1,5 +1,11 @@
 import '../styles/globals.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <div className="min-h-screen bg-[#003366]">
+      <Component {...pageProps} />
+    </div>
+  );
 }
+
+export default MyApp;
