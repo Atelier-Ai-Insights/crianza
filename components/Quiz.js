@@ -64,7 +64,7 @@ export default function Quiz() {
         </main>
 
         <footer className="mt-10 text-blue-300 text-xs opacity-60 uppercase tracking-widest">
-          Ateliê © 2026
+          Atelier Consultoría y Estrategia S.A.S - Todos los Derechos Reservados 2025
         </footer>
       </div>
     );
