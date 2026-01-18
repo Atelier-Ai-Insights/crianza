@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sintonia-blue': '#1E3A8A',    // Azul Acero Profesional
-        'sintonia-dark': '#111827',    // Gris casi negro para Headers
-        'sintonia-bone': '#F9F7F2',    // Blanco Hueso (Fondo cálido)
-        'sintonia-slate': '#475569',   // Gris para textos
+        'sintonia-blue': '#4063B0',    // El azul de tu última imagen
+        'sintonia-dark': '#1E293B',    // Gris pizarra para textos
+        'sintonia-bone': '#F9F7F2',    // Blanco hueso para fondos
+        'sintonia-light': '#F1F5F9',   // Gris muy claro para inputs
       },
     },
   },
