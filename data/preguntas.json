@@ -8,7 +8,7 @@
   { "id": 7, "categoria": "conexion", "texto": "¿Qué tan seguido siente que en su casa se escuchan?" },
   { "id": 8, "categoria": "conflicto", "texto": "¿Con qué frecuencia terminan gritando ante un problema?" },
   { "id": 9, "categoria": "conflicto", "texto": "¿Qué tan seguido evitan hablar cuando algo les molesta?" },
-  { "id": 10, "categoria": "crianza", "texto": "¿Con qué frecuencia tienen horarios en casa?" },
+  { "id": 10, "categoria": "crianza", "texto": "¿Con qué frecuencia siguen horarios y rutinas en casa?" },
   { "id": 11, "categoria": "crianza", "texto": "¿Se sienta con ellos a explicarles lo que pasó?" },
   { "id": 12, "categoria": "crianza", "texto": "¿Deja que sus hijos hagan solos lo que ya saben hacer?" },
   { "id": 13, "categoria": "crianza", "texto": "¿Logra mantener la calma al poner reglas?" }
