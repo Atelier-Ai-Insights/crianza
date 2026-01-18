@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Opcional: Un estilo base para el fondo de toda la app */
+body {
+  @apply bg-slate-50;
+}
