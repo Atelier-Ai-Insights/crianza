@@ -1,0 +1,30 @@
+const calcularPerfil = (respuestas) => {
+  // 1. Mapeo de respuestas (ajustando el índice 0 del array a la pregunta 1)
+  const P = (n) => respuestas[n - 1];
+
+  // 2. Cálculo de Dimensiones según tus fórmulas
+  const dimensiones = {
+    desgaste: (P(1) + P(2) + P(3) + P(4)) / 4,
+    conexion: (P(5) + P(6) + P(7)) / 3,
+    conflicto: (P(8) + P(9)) / 2,
+    crianza: (P(10) + P(11) + P(12) + P(13)) / 4
+  };
+
+  // 3. Reglas de Clasificación
+  let perfilFinal = "";
+
+  if (dimensiones.desgaste >= 3.3 && dimensiones.conexion < 3.0) {
+    perfilFinal = "Perfil 1 (Crisis)";
+  } 
+  else if (dimensiones.conexion >= 3.8 && dimensiones.desgaste < 2.8 && dimensiones.conflicto < 2.5) {
+    perfilFinal = "Perfil 2 (Adaptativo)";
+  } 
+  else if (dimensiones.crianza >= 3.8 && dimensiones.desgaste >= 2.8) {
+    perfilFinal = "Perfil 3 (Tensión)";
+  } 
+  else {
+    perfilFinal = "Perfil Mixto";
+  }
+
+  return { perfilFinal, dimensiones };
+};
