@@ -26,31 +26,29 @@ export default function Plan() {
     load();
   }, []);
 
-  if (loading) return <div className="min-h-screen bg-[#F9F7F2] flex items-center justify-center font-bold text-slate-400">CARGANDO...</div>;
+  if (loading) return <div className="min-h-screen bg-white flex items-center justify-center font-bold text-slate-300 uppercase italic tracking-widest">Cargando...</div>;
 
   return (
-    <div className="min-h-screen bg-[#F9F7F2] pt-32 px-6 pb-20">
-      <header className="fixed top-0 left-0 w-full bg-[#4063B0] h-20 px-6 flex items-center justify-between z-30 shadow-md">
+    <div className="min-h-screen bg-white pt-32 px-6 pb-20">
+      <header className="fixed top-0 left-0 w-full bg-primary h-20 px-6 flex items-center justify-between z-30 shadow-md">
         <button onClick={() => supabase.auth.signOut().then(() => router.push('/'))} className="text-[9px] font-bold text-white/60 uppercase">Cerrar Sesión</button>
-        <div className="flex items-center gap-2 text-white font-bold italic"><div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-[10px] text-[#4063B0]">❤️</div>Sintonía</div>
+        <div className="flex items-center text-white font-bold italic uppercase tracking-widest">Estilos Parentales</div>
         <div className="w-12 flex justify-end"><Menu /></div>
       </header>
-      
       <main className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-[3rem] p-10 shadow-sm border border-slate-100 mb-10 border-t-[10px] border-[#4063B0]">
-          <h1 className="text-3xl font-black text-slate-900 mb-4 uppercase italic tracking-tighter">Tu Plan de Capacitación</h1>
-          <p className="text-slate-500 leading-relaxed text-lg">{info?.descripcion}</p>
+        <div className="bg-white rounded-[3rem] p-10 shadow-sm border border-slate-100 mb-10 border-t-[10px] border-primary">
+          <h1 className="text-3xl font-black text-slate-900 mb-4 uppercase italic tracking-tighter">Tu Capacitación</h1>
+          <p className="text-slate-500 leading-relaxed text-lg tracking-tight">{info?.descripcion}</p>
         </div>
-
-        <h2 className="text-xl font-black mb-8 text-slate-800 uppercase italic flex items-center gap-3"><span className="w-1.5 h-6 bg-[#4063B0] rounded-full"></span>Tu formación</h2>
-        <div className="space-y-3">
+        <h2 className="text-xl font-black mb-8 text-slate-800 uppercase italic flex items-center gap-3"><span className="w-1.5 h-6 bg-primary rounded-full"></span>Mi Formación</h2>
+        <div className="space-y-4">
           {recursos.map(r => (
-            <div key={r.id} className="bg-white p-6 rounded-[2rem] border border-slate-100 flex justify-between items-center group hover:shadow-md transition-all">
+            <div key={r.id} className="bg-white p-6 rounded-3xl border border-slate-100 flex justify-between items-center group hover:border-primary transition-all">
               <div>
-                <span className="text-[9px] font-bold text-[#4063B0] uppercase tracking-widest">Día {r.dia}</span>
-                <h3 className="font-bold text-slate-800 uppercase tracking-tight group-hover:text-[#4063B0] transition-colors">{r.titulo}</h3>
+                <span className="text-[9px] font-bold text-primary uppercase tracking-widest italic">Día {r.dia}</span>
+                <h3 className="font-bold text-slate-800 uppercase group-hover:text-primary transition-colors tracking-tighter">{r.titulo}</h3>
               </div>
-              <a href={r.url_recurso} target="_blank" className="bg-[#4063B0] text-white w-12 h-12 rounded-2xl flex items-center justify-center hover:scale-105 transition-all shadow-md">▶</a>
+              <a href={r.url_recurso} target="_blank" className="bg-primary text-white w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg hover:scale-105 transition-all">▶</a>
             </div>
           ))}
         </div>
