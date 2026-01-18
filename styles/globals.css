@@ -3,11 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --primary: #4063B0;
-  --primary-hover: #2D467E;
-  --header-bg: #0F172A; /* El azul oscuro del header en la captura */
+  /* EL NUEVO AZUL DE TU IMAGEN */
+  --primary: #4A69BD; 
+  --primary-hover: #3C5596;
+  --header-bg: #4A69BD;
 }
 
 body {
-  @apply bg-white text-slate-700 antialiased font-sans; /* Fondo blanco global */
+  @apply bg-white text-slate-700 antialiased font-sans;
 }
