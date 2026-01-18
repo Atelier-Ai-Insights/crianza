@@ -8,7 +8,6 @@ module.exports = {
     extend: {
       colors: {
         'sintonia-dark': '#003366',
-        'sintonia-blue': '#0055A4',
       },
     },
   },
