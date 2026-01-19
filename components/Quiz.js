@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { calcularPerfil } from '../utils/algoritmo';
+import { PERFILES } from '../constants/perfiles'; // Importación de la fuente de verdad
 import preguntas from '../data/preguntas.json';
 import feedbackData from '../data/feedback.json';
 import Menu from './Menu';
-import { CONFIG } from '../constants/config'; // Importación centralizada
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { CONFIG } from '../constants/config';
+import { ArrowLeft, ChevronRight, CheckCircle2 } from 'lucide-react';
 
 export default function Quiz() {
   const [fase, setFase] = useState('bienvenida'); 
@@ -30,7 +31,10 @@ export default function Quiz() {
     <header className="fixed top-0 left-0 w-full bg-primary h-20 px-6 flex items-center justify-between z-30 shadow-md">
       <div className="w-12">
         {fase !== 'bienvenida' && (
-          <button onClick={() => fase === 'test' ? setPaso(p => Math.max(0, p - 1)) : setFase('bienvenida')} className="p-2 text-white/80 hover:text-white">
+          <button 
+            onClick={() => fase === 'test' ? setPaso(p => Math.max(0, p - 1)) : setFase('bienvenida')} 
+            className="p-2 text-white/80 hover:text-white transition-colors"
+          >
             <ArrowLeft size={24} />
           </button>
         )}
@@ -46,10 +50,14 @@ export default function Quiz() {
     return (
       <div className="min-h-screen bg-white pt-32 px-6 flex flex-col items-center">
         <HeaderSuperior />
-        <main className="max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100 text-center">
-          <h2 className="text-[10px] font-bold text-primary tracking-[0.3em] mb-4 uppercase">Test de tres minutos</h2>
+        <main className="max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100 text-center bg-white">
+          <h2 className="text-[10px] font-bold text-primary tracking-[0.3em] mb-4 uppercase">JadeEdu • Test de bienestar</h2>
           <h1 className="text-3xl font-black text-slate-900 leading-tight mb-8 uppercase italic tracking-tighter">Tu bienestar familiar comienza aquí</h1>
-          <button onClick={() => setFase('test')} className="w-full bg-primary text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 uppercase tracking-widest hover:bg-primary-hover shadow-lg transition-all">
+          <p className="text-slate-500 text-sm mb-8 leading-relaxed">Descubre tu perfil de parentalidad y cómo influye en tu salud mental en solo 3 minutos.</p>
+          <button 
+            onClick={() => setFase('test')} 
+            className="w-full bg-primary text-white py-5 rounded-2xl font-bold flex items-center justify-center gap-3 uppercase tracking-widest hover:bg-primary-hover shadow-lg transition-all active:scale-95"
+          >
             Empezar <ChevronRight size={20} />
           </button>
         </main>
@@ -62,12 +70,37 @@ export default function Quiz() {
     return (
       <div className="min-h-screen bg-white pt-32 px-6 pb-20 flex flex-col items-center">
         <HeaderSuperior />
-        <main className="bg-white max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100">
-          <h3 className="text-primary font-bold text-[10px] uppercase tracking-widest mb-4 italic">Resultado</h3>
-          <h1 className="text-2xl font-black text-slate-900 mb-6 uppercase italic leading-none tracking-tighter">{info?.titulo}</h1>
-          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 mb-10 italic text-slate-600 text-sm">"{info?.sugerencia}"</div>
-          <button onClick={() => window.location.href = '/auth?mode=signup'} className="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest shadow-lg transition-all">
-            Ver mi Plan
+        <main className="bg-white max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100 overflow-hidden">
+          <h3 className="text-primary font-bold text-[10px] uppercase tracking-widest mb-2 italic">Análisis Jade Finalizado</h3>
+          
+          <div className="mb-6">
+            <h1 className="text-2xl font-black text-slate-900 uppercase italic leading-none tracking-tighter mb-2">
+              {info?.titulo}
+            </h1>
+            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase tracking-wider">
+              Estado: {info?.estado}
+            </span>
+          </div>
+
+          <p className="text-slate-600 text-sm leading-relaxed mb-8">
+            {info?.mensaje}
+          </p>
+
+          <div className="space-y-4 mb-10">
+            <h4 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Primeros pasos recomendados:</h4>
+            {info?.recomendaciones?.map((rec, index) => (
+              <div key={index} className="flex gap-3 items-start bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <CheckCircle2 className="text-primary shrink-0" size={18} />
+                <p className="text-xs text-slate-700 font-medium leading-snug">{rec}</p>
+              </div>
+            ))}
+          </div>
+
+          <button 
+            onClick={() => window.location.href = '/auth?mode=signup'} 
+            className="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest shadow-lg hover:bg-primary-hover transition-all active:scale-95"
+          >
+            Ver mi Plan Detallado
           </button>
         </main>
       </div>
@@ -81,15 +114,25 @@ export default function Quiz() {
         <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
           <div className="h-full bg-primary transition-all duration-700" style={{ width: `${progreso}%` }}></div>
         </div>
+        <div className="flex justify-between mt-2 px-1">
+            <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Progreso</span>
+            <span className="text-[10px] font-bold text-primary uppercase tracking-widest">{Math.round(progreso)}%</span>
+        </div>
       </div>
-      <main className="max-w-md mx-auto w-full rounded-[2.5rem] p-8 border border-slate-100 shadow-lg bg-white">
-        <h2 className="text-lg font-bold text-center mb-8 text-slate-900 leading-snug tracking-tight first-letter:uppercase">
+      <main className="max-w-md mx-auto w-full rounded-[2.5rem] p-8 border border-slate-100 shadow-lg bg-white mb-8">
+        <h2 className="text-lg font-bold text-center mb-10 text-slate-900 leading-snug tracking-tight first-letter:uppercase">
           {preguntas[paso]?.texto.toLowerCase()}
         </h2>
-        <div className="space-y-2">
+        <div className="space-y-3">
           {[1, 2, 3, 4, 5].map((v) => (
-            <button key={v} onClick={() => manejarRespuesta(v)} className="w-full flex items-center p-4 border border-slate-100 rounded-xl hover:border-primary hover:bg-slate-50 transition-all group bg-white shadow-sm">
-              <div className="w-4 h-4 border-2 border-slate-200 rounded-full mr-4 group-hover:border-primary"></div>
+            <button 
+              key={v} 
+              onClick={() => manejarRespuesta(v)} 
+              className="w-full flex items-center p-4 border border-slate-100 rounded-xl hover:border-primary hover:bg-slate-50 transition-all group bg-white shadow-sm active:scale-[0.98]"
+            >
+              <div className="w-5 h-5 border-2 border-slate-200 rounded-full mr-4 group-hover:border-primary flex items-center justify-center transition-colors">
+                <div className="w-2 h-2 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div>
+              </div>
               <span className="font-bold text-sm text-slate-500 group-hover:text-slate-900 transition-colors uppercase tracking-tighter">
                 {v === 1 ? 'Nunca' : v === 2 ? 'Casi nunca' : v === 3 ? 'A veces' : v === 4 ? 'Casi siempre' : 'Siempre'}
               </span>
@@ -97,7 +140,7 @@ export default function Quiz() {
           ))}
         </div>
       </main>
-      <footer className="mt-auto py-10 text-slate-300 text-[10px] uppercase tracking-widest text-center px-6">
+      <footer className="mt-auto py-6 text-slate-300 text-[10px] uppercase tracking-widest text-center px-6">
         {CONFIG.FOOTER_TEXT}
       </footer>
     </div>
