@@ -3,11 +3,10 @@ export const CONFIG = {
   APP_NAME: "Jade-Health",
   FOOTER_TEXT: "Atelier Consultoría y Estrategia S.A.S - Todos los Derechos Reservados 2025",
   
-  // Color principal: He sugerido un verde jade que transmite salud y equilibrio.
-  // Puedes volver al azul original (#4A69BD) si lo prefieres.
+  // Color principal: Actualizado a Verde Jade para consistencia con el tema visual
   PRIMARY_COLOR: "#2D6A4F", 
   
-  // Otras configuraciones que podrías centralizar aquí más adelante:
+  // Otras configuraciones centralizadas:
   VERSION: "1.1.0",
   CONTACT_EMAIL: "contacto@jade-health.com.co"
 };
