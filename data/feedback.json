@@ -1,26 +1,28 @@
 {
-  "Perfil 2 (Adaptativo)": {
-    "titulo": "Perfil Adaptativo y Funcional",
-    "mensaje": "¡Felicidades! Tu perfil refleja un equilibrio saludable.",
-    "descripcion": "Tus resultados indican que cuentas con una base sólida de cohesión familiar y recursos emocionales efectivos. Logras separar las presiones laborales de tu vida en casa, manteniendo una comunicación abierta y positiva con tus hijos y pareja. Tu bienestar es un factor protector para tu familia.",
-    "sugerencia": "Sigue cultivando estos espacios de conexión y considera compartir tus estrategias con otras familias de tu entorno."
+  "Adaptativo y Funcional": {
+    "titulo": "Adaptativo y Funcional",
+    "estado": "Armonía y Equilibrio",
+    "mensaje": "Usted se encuentra en el grupo Adaptativo y Funcional. Los resultados indican que ha logrado construir un equilibrio saludable entre sus responsabilidades laborales y su vida familiar. Su hogar se caracteriza por una comunicación fluida, bajos niveles de conflicto y una alta satisfacción con su vida. Este entorno seguro es la base ideal para el desarrollo emocional de sus hijos e hijas.",
+    "recomendaciones": [
+      "Continúe priorizando los espacios de escucha activa que ya existen en su hogar.",
+      "Mantenga las rutinas actuales, ya que son fundamentales para el bienestar de su familia."
+    ]
   },
-  "Perfil 3 (Tensión)": {
-    "titulo": "Perfil de Crianza Positiva en Tensión",
-    "mensaje": "Estás muy comprometido/a, pero el cansancio te está pasando factura.",
-    "descripcion": "Es evidente que valoras profundamente la crianza respetuosa y formativa, esforzándote por ser un referente positivo para tus hijos. Sin embargo, tus niveles de estrés laboral y algunas dificultades en la comunicación indican que estás operando bajo mucha presión. Es normal sentir que 'no puedes con todo'.",
-    "sugerencia": "Recuerda que para cuidar, primero debes cuidarte tú. Delegar tareas y buscar momentos de pausa personal te ayudará a que tu intención de crianza fluya con menos esfuerzo."
+  "Crianza Positiva en Tensión": {
+    "titulo": "Crianza Positiva en Tensión",
+    "estado": "Esfuerzo con Fatiga",
+    "mensaje": "Usted se encuentra en el grupo de Crianza Positiva en Tensión. Sus respuestas reflejan un compromiso admirable con la educación y el bienestar de sus hijos, manteniendo rutinas y pautas de crianza amorosas y respetuosas. Sin embargo, detectamos que el peso del estrés y el cansancio laboral están generando una “tensión” constante en su bienestar emocional. Usted está cuidando muy bien de los suyos, pero necesita empezar a cuidar de sí mismo/a.",
+    "recomendaciones": [
+      "Es vital establecer límites claros entre el horario laboral y el tiempo personal para reducir el desgaste.",
+      "No tema delegar tareas; su bienestar es el motor que sostiene la calidad de su crianza."
+    ]
   },
-  "Perfil 1 (Crisis)": {
-    "titulo": "Perfil Multiproblemático en Crisis",
-    "mensaje": "Es momento de hacer una pausa y buscar apoyo.",
-    "descripcion": "Tus resultados sugieren que te encuentras en un periodo de alta vulnerabilidad. El estrés del trabajo está invadiendo tu espacio familiar, lo que genera un ciclo de agotamiento, falta de sueño y conflictos que se resuelven de forma agresiva o con distanciamiento.",
-    "sugerencia": "Es prioritario buscar apoyo profesional o redes familiares para gestionar el estrés laboral y aprender nuevas herramientas de comunicación."
-  },
-  "Perfil Mixto": {
-    "titulo": "Perfil Mixto",
-    "mensaje": "Tu camino de crianza tiene matices interesantes.",
-    "descripcion": "Tus resultados muestran una combinación de fortalezas y áreas de oportunidad. Hay días de gran conexión y otros donde el estrés laboral pesa un poco más.",
-    "sugerencia": "Te recomendamos revisar los recursos de la Semana 1 para identificar en qué áreas específicas puedes fortalecer tu bienestar."
+  "Abrumado en Crisis": {
+    "titulo": "Abrumado en Crisis",
+    "estado": "Alerta y Necesidad de Apoyo",
+    "mensaje": "Usted se encuentra en el grupo Multiproblemático en Crisis. Los datos sugieren que está atravesando un periodo de alta presión donde el agotamiento laboral ha impactado profundamente la convivencia familiar, dificultando la conexión con sus seres queridos. Es normal sentirse abrumado cuando el estrés y el conflicto coinciden. Reconocer este estado es el primer paso para recuperar la calma en su hogar.",
+    "recomendaciones": [
+      "Priorice pequeñas acciones para generar momentos de calidad con sus hijos al llegar a casa."
+    ]
   }
 }
