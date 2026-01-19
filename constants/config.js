@@ -9,5 +9,5 @@ export const CONFIG = {
   
   // Otras configuraciones que podrías centralizar aquí más adelante:
   VERSION: "1.1.0",
-  CONTACT_EMAIL: "contacto@jade-health.com"
+  CONTACT_EMAIL: "contacto@jade-health.com.co"
 };
