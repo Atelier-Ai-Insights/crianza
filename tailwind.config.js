@@ -4,9 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary)',
-        'primary-hover': 'var(--primary-hover)',
-        'sintonia-dark': 'var(--header-bg)',
+        // Verde Jade principal para botones y acentos
+        primary: '#2D6A4F', 
+        
+        // Verde más oscuro para estados hover
+        'primary-hover': '#1B4332', 
+        
+        // Color oscuro para el encabezado (Header) basado en la gama jade
+        'sintonia-dark': '#1B4332', 
       },
     },
   },
