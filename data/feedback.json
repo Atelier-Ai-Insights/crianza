@@ -13,7 +13,7 @@
     "estado": "Esfuerzo con Fatiga",
     "mensaje": "Usted se encuentra en el grupo de Crianza Positiva en Tensión. Sus respuestas reflejan un compromiso admirable con la educación y el bienestar de sus hijos, manteniendo rutinas y pautas de crianza amorosas y respetuosas. Sin embargo, detectamos que el peso del estrés y el cansancio están generando una “tensión” constante en su bienestar emocional. Usted está cuidando muy bien de los suyos, pero necesita empezar a cuidar de sí mismo/a.",
     "recomendaciones": [
-      "Es vital establecer límites claros entre el horario laboral y el tiempo personal para reducir el desgaste.",
+      "Es vital establecer límites claros entre sus responsabilidades y el tiempo personal para reducir el desgaste.",
       "No tema delegar tareas; su bienestar es el motor que sostiene la calidad de su crianza."
     ]
   },
@@ -22,7 +22,7 @@
     "estado": "Desorientado y en Estado de Alerta",
     "mensaje": "Usted se encuentra en el grupo Desorientado y en Estado de Alerta. Los datos sugieren que está atravesando un periodo de alta presión donde el agotamiento ha impactado profundamente la convivencia familiar, dificultando la conexión con sus seres queridos. Es normal sentirse abrumado cuando el estrés y el conflicto coinciden. Reconocer este estado es el primer paso para recuperar la calma en su hogar.",
     "recomendaciones": [
-      "Priorice pequeñas acciones para generar momentos de calidad con sus hijos al llegar a casa."
+      "Priorice pequeñas acciones para generar momentos de calidad con sus hijos."
     ]
   }
 }
