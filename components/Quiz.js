@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { calcularPerfil } from '../utils/algoritmo';
-import { PERFILES } from '../constants/perfiles'; // Importación de la fuente de verdad
+import { PERFILES } from '../constants/perfiles';
 import preguntas from '../data/preguntas.json';
 import feedbackData from '../data/feedback.json';
 import Menu from './Menu';
@@ -51,7 +51,7 @@ export default function Quiz() {
       <div className="min-h-screen bg-white pt-32 px-6 flex flex-col items-center">
         <HeaderSuperior />
         <main className="max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100 text-center bg-white">
-          <h2 className="text-[10px] font-bold text-primary tracking-[0.3em] mb-4 uppercase">JadeEdu • Test de bienestar</h2>
+          <h2 className="text-[10px] font-bold text-primary tracking-[0.3em] mb-4 uppercase">Jade-Health • Test de bienestar</h2>
           <h1 className="text-3xl font-black text-slate-900 leading-tight mb-8 uppercase italic tracking-tighter">Tu bienestar familiar comienza aquí</h1>
           <p className="text-slate-500 text-sm mb-8 leading-relaxed">Descubre tu perfil de parentalidad y cómo influye en tu salud mental en solo 3 minutos.</p>
           <button 
@@ -61,6 +61,10 @@ export default function Quiz() {
             Empezar <ChevronRight size={20} />
           </button>
         </main>
+        {/* Footer Verde añadido para consistencia */}
+        <footer className="mt-auto py-10 text-primary text-[10px] uppercase tracking-widest text-center px-6 italic font-bold">
+          {CONFIG.FOOTER_TEXT}
+        </footer>
       </div>
     );
   }
@@ -68,7 +72,7 @@ export default function Quiz() {
   if (fase === 'resultado') {
     const info = feedbackData[perfil];
     return (
-      <div className="min-h-screen bg-white pt-32 px-6 pb-20 flex flex-col items-center">
+      <div className="min-h-screen bg-white pt-32 px-6 pb-20 flex flex-col items-center text-slate-900">
         <HeaderSuperior />
         <main className="bg-white max-w-md w-full rounded-[2.5rem] p-10 shadow-lg border border-slate-100 overflow-hidden">
           <h3 className="text-primary font-bold text-[10px] uppercase tracking-widest mb-2 italic">Análisis Jade Finalizado</h3>
@@ -98,11 +102,15 @@ export default function Quiz() {
 
           <button 
             onClick={() => window.location.href = '/auth?mode=signup'} 
-            className="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest shadow-lg hover:bg-primary-hover transition-all active:scale-95"
+            className="w-full bg-primary text-white py-5 rounded-2xl font-bold uppercase tracking-widest shadow-lg hover:brightness-110 transition-all active:scale-95"
           >
             Ver mi Plan Detallado
           </button>
         </main>
+        {/* Footer Verde Jade */}
+        <footer className="mt-auto py-10 text-primary text-[10px] uppercase tracking-widest text-center px-6 italic font-bold">
+          {CONFIG.FOOTER_TEXT}
+        </footer>
       </div>
     );
   }
@@ -140,7 +148,8 @@ export default function Quiz() {
           ))}
         </div>
       </main>
-      <footer className="mt-auto py-6 text-slate-300 text-[10px] uppercase tracking-widest text-center px-6">
+      {/* Footer actualizado a Verde Jade y Negrita */}
+      <footer className="mt-auto py-10 text-primary text-[10px] uppercase tracking-widest text-center px-6 italic font-bold">
         {CONFIG.FOOTER_TEXT}
       </footer>
     </div>
