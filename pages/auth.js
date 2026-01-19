@@ -32,7 +32,6 @@ export default function Auth() {
       const { data, error } = await supabase.auth.signUp({ email, password });
       
       if (!error && data.user) {
-        // Recuperamos el nombre del perfil calculado (ej: "Abrumado en Crisis")
         const tempPerfil = localStorage.getItem('temp_perfil') || PERFILES.TENSION;
         
         const { error: profileError } = await supabase.from('perfiles').insert([{ 
@@ -54,7 +53,8 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50/30 pt-32 px-6 flex flex-col items-center">
+    /* 1. Fondo cambiado a blanco (bg-white) */
+    <div className="min-h-screen bg-white pt-32 px-6 flex flex-col items-center text-slate-900">
       <header className="fixed top-0 left-0 w-full bg-primary h-20 px-6 flex items-center justify-between z-30 shadow-md">
         <button 
           onClick={() => router.push('/')} 
@@ -86,7 +86,7 @@ export default function Auth() {
             <input 
               type="email" 
               placeholder="Correo electrónico" 
-              className="w-full p-5 pl-14 bg-slate-50 border border-slate-100 rounded-2xl focus:border-primary focus:bg-white outline-none transition-all text-sm" 
+              className="w-full p-5 pl-14 bg-slate-50 border border-slate-100 rounded-2xl focus:border-primary focus:bg-white outline-none transition-all text-sm text-slate-900" 
               onChange={(e) => setEmail(e.target.value)} 
               required 
             />
@@ -97,7 +97,7 @@ export default function Auth() {
             <input 
               type="password" 
               placeholder="Contraseña" 
-              className="w-full p-5 pl-14 bg-slate-50 border border-slate-100 rounded-2xl focus:border-primary focus:bg-white outline-none transition-all text-sm" 
+              className="w-full p-5 pl-14 bg-slate-50 border border-slate-100 rounded-2xl focus:border-primary focus:bg-white outline-none transition-all text-sm text-slate-900" 
               onChange={(e) => setPassword(e.target.value)} 
               required 
             />
@@ -123,7 +123,8 @@ export default function Auth() {
         </button>
       </main>
 
-      <footer className="mt-auto py-10 text-slate-300 text-[10px] uppercase tracking-widest text-center px-6 italic font-medium">
+      {/* 2. Pie de página en verde (text-primary) y negrita (font-bold) */}
+      <footer className="mt-auto py-10 text-primary text-[10px] uppercase tracking-widest text-center px-6 italic font-bold">
         {CONFIG.FOOTER_TEXT}
       </footer>
     </div>
