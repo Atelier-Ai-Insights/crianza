@@ -1,5 +1,5 @@
 export const PERFILES = {
-  CRISIS: "Abrumado en Crisis",
+  CRISIS: "Abrumado con Dificultades",
   ADAPTATIVO: "Adaptativo y Funcional",
   TENSION: "Crianza Positiva en Tensión"
 };
